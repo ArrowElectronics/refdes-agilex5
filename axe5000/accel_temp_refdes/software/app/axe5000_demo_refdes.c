@@ -428,7 +428,15 @@ void dispFS1606 ()
 {
 	printf ("FS1606 U6 (0.75V FPGA Core Voltage) Telemetry Data:\r\n");
 	FS1606_telemetry(U6_addr);
-
+	
+	printf ("FS1606 U8 (VADJ) Telemetry Data:\r\n");
+	FS1606_telemetry(U8_addr);
+ 
+	printf ("FS1606 U10 (1.8V) Telemetry Data:\r\n");
+	FS1606_telemetry(U10_addr);
+ 
+	printf ("FS1606 U11 (1.2V) Telemetry Data:\r\n");
+	FS1606_telemetry(U11_addr);
 }
 
 //********************************************************************

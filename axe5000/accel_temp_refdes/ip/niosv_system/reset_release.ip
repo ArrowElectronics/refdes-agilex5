@@ -13,17 +13,17 @@ Intel and sold by Intel or its authorized distributors.  Please
 refer to the applicable agreement for further details, at
 https://fpgasoftware.intel.com/eula.-->
 <ipxact:component xmlns:altera="http://www.altera.com/XMLSchema/IPXact2014/extensions" xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014">
-  <ipxact:vendor>Intel Corporation</ipxact:vendor>
+  <ipxact:vendor>Altera</ipxact:vendor>
   <ipxact:library>reset_release</ipxact:library>
   <ipxact:name>reset_release</ipxact:name>
   <ipxact:version>1.0.1</ipxact:version>
   <ipxact:busInterfaces>
     <ipxact:busInterface>
       <ipxact:name>ninit_done</ipxact:name>
-      <ipxact:busType vendor="intel" library="intel" name="reset" version="24.3"></ipxact:busType>
+      <ipxact:busType vendor="intel" library="intel" name="reset" version="25.1"></ipxact:busType>
       <ipxact:abstractionTypes>
         <ipxact:abstractionType>
-          <ipxact:abstractionRef vendor="intel" library="intel" name="reset" version="24.3"></ipxact:abstractionRef>
+          <ipxact:abstractionRef vendor="intel" library="intel" name="reset" version="25.1"></ipxact:abstractionRef>
           <ipxact:portMaps>
             <ipxact:portMap>
               <ipxact:logicalPort>
@@ -97,7 +97,7 @@ https://fpgasoftware.intel.com/eula.-->
   </ipxact:model>
   <ipxact:vendorExtensions>
     <altera:entity_info>
-      <ipxact:vendor>Intel Corporation</ipxact:vendor>
+      <ipxact:vendor>Altera</ipxact:vendor>
       <ipxact:library>reset_release</ipxact:library>
       <ipxact:name>intel_user_rst_clkgate</ipxact:name>
       <ipxact:version>1.0.1</ipxact:version>
@@ -108,11 +108,6 @@ https://fpgasoftware.intel.com/eula.-->
           <ipxact:name>outputType</ipxact:name>
           <ipxact:displayName>Type of reset output port</ipxact:displayName>
           <ipxact:value>Reset Interface</ipxact:value>
-        </ipxact:parameter>
-        <ipxact:parameter parameterId="simRstPeriod" type="int">
-          <ipxact:name>simRstPeriod</ipxact:name>
-          <ipxact:displayName>Initial reset duration (sim)</ipxact:displayName>
-          <ipxact:value>51</ipxact:value>
         </ipxact:parameter>
         <ipxact:parameter parameterId="DEVICE_FAMILY" type="string">
           <ipxact:name>DEVICE_FAMILY</ipxact:name>
@@ -131,7 +126,7 @@ https://fpgasoftware.intel.com/eula.-->
         <ipxact:parameter parameterId="device" type="string">
           <ipxact:name>device</ipxact:name>
           <ipxact:displayName>Device</ipxact:displayName>
-          <ipxact:value>A5EC065BB32AE4S</ipxact:value>
+          <ipxact:value>A5EC008BM16AE6S</ipxact:value>
         </ipxact:parameter>
         <ipxact:parameter parameterId="deviceFamily" type="string">
           <ipxact:name>deviceFamily</ipxact:name>

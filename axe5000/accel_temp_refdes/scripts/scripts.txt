@@ -1,13 +1,26 @@
 
-niosv-app --bsp_dir=software/demo_bsp --app_dir=software/demo_app -s=software/demo_app/axe5000_demo_refdes.c
+niosv-app --bsp_dir=software/bsp --app_dir=software/app -s=software/app/axe5000_demo_refdes.c
+
+riscfree -data software
+
 # Build Design in Ashling RiscFree
-niosv-download -g -r -c 1 software/demo_app/build/Debug/demo_app.elf
 
+# Create demo.hex for onchip memory in the FPGA
 
-vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+elf2hex software/app/build/Debug/app.elf -b 0x00000000 -w 32 -e 0x0003FFFF --record=4 -o demo.hex
 
-elf2hex software/demo_app/build/Debug/demo_app.elf -b 0x00000000 -w 32 -e 0x0003FFFF --record=4 -o Qpro/demo.hex
+# Compile in Quartus
 
-quartus_pfg.exe -c Qpro/axe5000_demo_refdes.sof Qpro/output_files/axe5000_demo_refdes.jic -o device=MT25QU256 -o flash_loader=A5EC008BM16AE6S -o mode=ASX4
+source sources/axe5000_pin_assignment.tcl
 
-quartus_pgm.exe -c 1 -m jtag -o "pvbi;Qpro/output_files/axe5000_demo_refdes.jic@1"
+# Download sof and elf
+
+quartus_pgm -c 1 -m jtag -o "p;axe5000_top.sof@1"
+
+niosv-download -g -r -c 1 software/app/build/Debug/app.elf
+
+# Create flashable file
+
+quartus_pfg.exe -c axe5000_demo_refdes.sof axe5000_demo_refdes.jic -o device=MT25QU256 -o flash_loader=A5EC008BM16AE6S -o mode=ASX4
+
+quartus_pgm.exe -c 1 -m jtag -o "pvbi;axe5000_demo_refdes.jic@1"
