@@ -1,0 +1,62 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 2024  Intel Corporation. All rights reserved.
+# Your use of Intel Corporation's design tools, logic functions 
+# and other software and tools, and any partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Intel Program License 
+# Subscription Agreement, the Intel Quartus Prime License Agreement,
+# the Intel FPGA IP License Agreement, or other applicable license
+# agreement, including, without limitation, that your use is for
+# the sole purpose of programming logic devices manufactured by
+# Intel and sold by Intel or its authorized distributors.  Please
+# refer to the Intel FPGA Software License Subscription Agreements 
+# on the Quartus Prime software download page.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus Prime
+# Version 24.1.0 Build 115 03/21/2024 Patches 0.08 SC Pro Edition
+# Date created = 13:24:36  June 06, 2024
+#
+# -------------------------------------------------------------------------- #
+set_global_assignment -name TOP_LEVEL_ENTITY axe5_eagle_top
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION "24.1.0 SP0.08"
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "13:24:36  JUNE 06, 2024"
+set_global_assignment -name LAST_QUARTUS_VERSION "24.1.0 SP0.08 Pro Edition"
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 100
+set_global_assignment -name DEVICE A5ED065BB32AE4SR0
+set_global_assignment -name FAMILY "Agilex 5"
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 256
+set_global_assignment -name PWRMGT_VOLTAGE_OUTPUT_FORMAT "LINEAR FORMAT"
+set_global_assignment -name PWRMGT_LINEAR_FORMAT_N "-12"
+set_location_assignment PIN_AC68 -to REFCLK_3B0 -comment IOBANK_3B_B
+set_instance_assignment -name IO_STANDARD "1.3V TRUE DIFFERENTIAL SIGNALING" -to REFCLK_3B0 -entity axe5_eagle_top
+set_instance_assignment -name INPUT_TERMINATION DIFFERENTIAL -to REFCLK_3B0 -entity axe5_eagle_top
+set_location_assignment PIN_A23 -to FPGA_25M_CLK
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to FPGA_25M_CLK -entity axe5_eagle_top
+set_location_assignment PIN_CK134 -to FPGA_RST_n
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to FPGA_RST_n -entity axe5_eagle_top
+set_location_assignment PIN_B30 -to FPGA_PB[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to FPGA_PB[0] -entity axe5_eagle_top
+set_location_assignment PIN_A30 -to FPGA_PB[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to FPGA_PB[1] -entity axe5_eagle_top
+set_location_assignment PIN_CK125 -to LED0R
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to LED0R -entity axe5_eagle_top
+set_location_assignment PIN_CL125 -to LED0G
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to LED0G -entity axe5_eagle_top
+set_location_assignment PIN_BR118 -to LED0B
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to LED0B -entity axe5_eagle_top
+set_location_assignment PIN_CF118 -to LED1R
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to LED1R -entity axe5_eagle_top
+set_location_assignment PIN_BW118 -to LED1G
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to LED1G -entity axe5_eagle_top
+set_location_assignment PIN_CA118 -to LED1B
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to LED1B -entity axe5_eagle_top
+set_global_assignment -name VERILOG_FILE sources/axe5_eagle_top.v
+set_global_assignment -name SDC_FILE sources/axe5_eagle_top.sdc
+set_global_assignment -name POWER_APPLY_THERMAL_MARGIN ADDITIONAL
