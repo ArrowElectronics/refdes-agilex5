@@ -60,3 +60,4 @@ set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to LED1B -entity axe5_
 set_global_assignment -name VERILOG_FILE sources/axe5_eagle_top.v
 set_global_assignment -name SDC_FILE sources/axe5_eagle_top.sdc
 set_global_assignment -name POWER_APPLY_THERMAL_MARGIN ADDITIONAL
+set_global_assignment -name IP_FILE rrip.ip
