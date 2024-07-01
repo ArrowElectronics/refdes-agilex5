@@ -1,0 +1,56 @@
+echo "Trying to boot Linux from device ${target}";
+
+if test ${target} = "mmc0"; then
+	if test -e ${devtype} ${devnum}:${distro_bootpart} /${bootfile}; then
+		echo "Found kernel in mmc0";		
+		mmc rescan;
+		echo "Change the pullup values on EMAC2 HPS mii signals";
+		mw.l 10d13224 14; 
+		mw.l 10d13228 14; 
+		mw.l 10d1323c 14; 
+		mw.l 10d13234 14; 
+		mw.l 10d13248 14; 
+		mw.l 10d1324C 14;
+		echo "Release Ethernet and USB PHYs from reset";
+		mw.l 0x10D11028 0x01027fb0 1;
+		mw.l 0x10c03304 0x410 1; 
+		mw.l 0x10c03300 0x00000410; 
+		mw.l 0x10c03300 0x00000000; 
+		sleep 1; 
+		mw.l 0x10c03300 0x00000410;
+		bridge enable; 
+		mw.l 0x028000070 0x00000000; 
+		sleep 1; 
+		mw.l 0x28000070 0x00000001; 
+		fatload mmc 0:1 ${loadaddr} ${bootfile};
+		setenv bootargs "console=uart1,115200 root=/dev/mmcblk0p2 rw init=/sbin/init rootwait earlycon panic=-1 nosmp kvm-arm.mode=nvhe loglevel=8\r";
+		bootm ${loadaddr};
+		exit;
+	fi
+fi
+
+if test ${target} = "qspi"; then
+	qspi_clock=0x17d78400;
+	if ubi part root; then
+		ubi detach;
+		mtdparts;
+		ubi part root;
+		ubi readvol ${loadaddr} kernel;
+		ubi detach;
+		setenv bootargs "earlycon panic=-1 ubi.mtd=1 root=ubi0:rootfs rootfstype=ubifs rw rootwait";
+		bootm ${loadaddr};
+	fi
+	ubi detach;
+	sf probe;
+	sf read ${loadaddr} ${qspibootimageaddr} ${bootimagesize};
+	setenv bootargs "earlycon root=/dev/mtdblock1 rw rootfstype=jffs2 rootwait";
+	bootm ${loadaddr};
+fi
+
+if test ${target} = "nand"; then
+	ubi part root;
+	ubi readvol ${loadaddr} kernel;
+	setenv bootargs "earlycon panic=-1 root=${nandroot} rw rootwait rootfstype=ubifs ubi.mtd=1";
+	bootm ${loadaddr};
+fi
+
