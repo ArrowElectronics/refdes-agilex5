@@ -1,0 +1,15 @@
+!SESSION 2024-08-30 15:42:39.929 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=20.0.1
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -data software
+
+!ENTRY org.eclipse.cdt.ui 2 0 2024-08-30 15:43:40.386
+!MESSAGE Default project not found in New C/C++ Project Wizard
+
+!ENTRY org.eclipse.cdt.ui 2 0 2024-08-30 15:44:23.959
+!MESSAGE Default project not found in New C/C++ Project Wizard
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-08-30 15:46:54.244
+!MESSAGE Indexed 'app' (1 sources, 0 headers) in 0.163 sec: 2 declarations; 5 references; 6 unresolved inclusions; 0 syntax errors; 2 unresolved names (22%)
