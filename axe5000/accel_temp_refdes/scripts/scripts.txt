@@ -1,0 +1,13 @@
+
+niosv-app --bsp_dir=software/demo_bsp --app_dir=software/demo_app -s=software/demo_app/axe5000_demo_refdes.c
+# Build Design in Ashling RiscFree
+niosv-download -g -r -c 1 software/demo_app/build/Debug/demo_app.elf
+
+
+vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+
+elf2hex software/demo_app/build/Debug/demo_app.elf -b 0x00000000 -w 32 -e 0x0003FFFF --record=4 -o Qpro/demo.hex
+
+quartus_pfg.exe -c Qpro/axe5000_demo_refdes.sof Qpro/output_files/axe5000_demo_refdes.jic -o device=MT25QU256 -o flash_loader=A5EC008BM16AE6S -o mode=ASX4
+
+quartus_pgm.exe -c 1 -m jtag -o "pvbi;Qpro/output_files/axe5000_demo_refdes.jic@1"

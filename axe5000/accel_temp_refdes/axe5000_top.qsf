@@ -1,0 +1,71 @@
+set_location_assignment PIN_A14 -to DIP_SW[0]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 9MA -to RLED -entity axe5000_top
+set_instance_assignment -name CURRENT_STRENGTH_NEW 9MA -to GLED -entity axe5000_top
+set_instance_assignment -name CURRENT_STRENGTH_NEW 9MA -to BLED -entity axe5000_top
+set_location_assignment PIN_AG23 -to UART_RXD
+set_location_assignment PIN_AG24 -to UART_TXD
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to UART_RXD -entity axe5000_top
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to UART_TXD -entity axe5000_top
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 2025  Intel Corporation. All rights reserved.
+# Your use of Intel Corporation's design tools, logic functions 
+# and other software and tools, and any partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Intel Program License 
+# Subscription Agreement, the Intel Quartus Prime License Agreement,
+# the Intel FPGA IP License Agreement, or other applicable license
+# agreement, including, without limitation, that your use is for
+# the sole purpose of programming logic devices manufactured by
+# Intel and sold by Intel or its authorized distributors.  Please
+# refer to the Intel FPGA Software License Subscription Agreements 
+# on the Quartus Prime software download page.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus Prime
+# Version 24.3.1 Build 102 01/14/2025 SC Pro Edition
+# Date created = 09:11:57  January 28, 2025
+#
+# -------------------------------------------------------------------------- #
+set_global_assignment -name PWRMGT_VOLTAGE_OUTPUT_FORMAT "LINEAR FORMAT"
+set_global_assignment -name PWRMGT_LINEAR_FORMAT_N "-12"
+set_global_assignment -name LAST_QUARTUS_VERSION "25.1.0 Pro Edition"
+set_global_assignment -name FAMILY "Agilex 5"
+set_global_assignment -name TOP_LEVEL_ENTITY axe5000_top
+set_global_assignment -name DEVICE A5EC008BM16AE6S
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 100
+set_global_assignment -name AUTO_RESTART_CONFIGURATION OFF
+set_global_assignment -name ON_CHIP_BITSTREAM_DECOMPRESSION OFF
+set_global_assignment -name USE_CONF_DONE SDM_IO16
+set_global_assignment -name USE_INIT_DONE SDM_IO0
+set_global_assignment -name ACTIVE_SERIAL_CLOCK AS_FREQ_25MHZ
+set_global_assignment -name DEVICE_INITIALIZATION_CLOCK OSC_CLK_1_25MHZ
+set_global_assignment -name IP_FILE ip/niosv_system/accel_irq.ip
+set_global_assignment -name TCL_SCRIPT_FILE sources/axe5000_pin_assignment.tcl
+set_global_assignment -name VERILOG_FILE sources/axe5000_top.v
+set_global_assignment -name SDC_FILE sources/axe5000_top.sdc
+set_global_assignment -name IP_FILE ip/niosv_system/reset_release.ip
+set_global_assignment -name IP_FILE ip/niosv_system/onchip_memory.ip
+set_global_assignment -name IP_FILE ip/niosv_system/jtag_master.ip
+set_global_assignment -name IP_FILE ip/niosv_system/accel_i2c.ip
+set_global_assignment -name IP_FILE ip/niosv_system/pwm8x3.ip
+set_global_assignment -name IP_FILE ip/niosv_system/sys_id.ip
+set_global_assignment -name IP_FILE ip/niosv_system/dip_sw.ip
+set_global_assignment -name IP_FILE ip/niosv_system/pb.ip
+set_global_assignment -name IP_FILE ip/niosv_system/sdm_mailbox_client.ip
+set_global_assignment -name IP_FILE ip/niosv_system/jtag_uart.ip
+set_global_assignment -name IP_FILE ip/niosv_system/iopll.ip
+set_global_assignment -name IP_FILE ip/niosv_system/sysclk_bridge.ip
+set_global_assignment -name IP_FILE ip/niosv_system/niosv_m_0.ip
+set_global_assignment -name IP_FILE ip/niosv_system/reset_bridge.ip
+set_global_assignment -name IP_FILE ip/niosv_system/niosv_system_clock_in.ip
+set_global_assignment -name IP_FILE ip/niosv_system/interval_2s_timer.ip
+set_global_assignment -name QSYS_FILE niosv_system.qsys
+set_global_assignment -name GENERATE_COMPRESSED_SOF ON
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
+set_global_assignment -name BOARD default
+set_global_assignment -name IP_FILE ip/niosv_system/lw_uart.ip
