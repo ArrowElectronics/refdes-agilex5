@@ -1,0 +1,228 @@
+set_global_assignment -name BOARD default
+set_global_assignment -name TOP_LEVEL_ENTITY axe5_eagle_mipi_hdmi
+set_global_assignment -name LAST_QUARTUS_VERSION "25.1.0 Pro Edition"
+set_global_assignment -name DEVICE A5ED065BB32AE4SR0
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 100
+set_global_assignment -name FAMILY "Agilex 5"
+set_global_assignment -name AUTO_RESTART_CONFIGURATION OFF
+set_global_assignment -name ON_CHIP_BITSTREAM_DECOMPRESSION OFF
+set_global_assignment -name USE_CONF_DONE SDM_IO16
+set_global_assignment -name USE_INIT_DONE SDM_IO0
+set_global_assignment -name ACTIVE_SERIAL_CLOCK AS_FREQ_25MHZ
+set_global_assignment -name DEVICE_INITIALIZATION_CLOCK OSC_CLK_1_25MHZ
+set_global_assignment -name PWRMGT_VOLTAGE_OUTPUT_FORMAT "LINEAR FORMAT"
+set_global_assignment -name PWRMGT_LINEAR_FORMAT_N "-12"
+set_global_assignment -name IP_FILE ip/niosv_system/pb.ip
+set_global_assignment -name IP_FILE ip/niosv_system/lw_uart.ip
+set_global_assignment -name QSYS_FILE niosv_system.qsys
+set_global_assignment -name IP_FILE ip/hdmi_system/ddio_out.ip
+set_global_assignment -name TCL_SCRIPT_FILE sources/axe5_eagle_mipi_hdmi_pin.tcl
+set_global_assignment -name VERILOG_FILE sources/axe5_eagle_mipi_hdmi.v
+set_global_assignment -name SDC_FILE sources/axe5_eagle_mipi_hdmi.sdc
+set_global_assignment -name QSYS_FILE mipi_system.qsys
+set_global_assignment -name IP_FILE ip/niosv_system/niosv_system_clock_in.ip
+set_global_assignment -name IP_FILE ip/niosv_system/emif_lpddr4.ip
+set_global_assignment -name IP_FILE ip/hdmi_system/hdmi_clock_bridge.ip
+set_global_assignment -name IP_FILE ip/niosv_system/hdmi_i2c.ip
+set_global_assignment -name IP_FILE ip/niosv_system/iopll.ip
+set_global_assignment -name IP_FILE ip/niosv_system/jtag_master.ip
+set_global_assignment -name IP_FILE ip/niosv_system/mipi_i2c.ip
+set_global_assignment -name IP_FILE ip/niosv_system/niosv_m.ip
+set_global_assignment -name IP_FILE ip/niosv_system/onchip_memory.ip
+set_global_assignment -name IP_FILE ip/niosv_system/pio_led.ip
+set_global_assignment -name IP_FILE ip/niosv_system/pio_mipi.ip
+set_global_assignment -name IP_FILE ip/niosv_system/reset_controller.ip
+set_global_assignment -name IP_FILE ip/niosv_system/reset_handler.ip
+set_global_assignment -name IP_FILE ip/niosv_system/niosv_system_reset_in.ip
+set_global_assignment -name IP_FILE ip/niosv_system/reset_release.ip
+set_global_assignment -name IP_FILE ip/niosv_system/sysid.ip
+set_global_assignment -name QSYS_FILE hdmi_system.qsys
+set_global_assignment -name IP_FILE ip/hdmi_system/hdmi_system_mm_bridge.ip
+set_global_assignment -name IP_FILE ip/mipi_system/vvp_scaler.ip
+set_global_assignment -name IP_FILE ip/hdmi_system/vvp_vfr.ip
+set_global_assignment -name IP_FILE ip/mipi_system/vid_mm_bridge.ip
+set_global_assignment -name IP_FILE ip/mipi_system/mipi_dphy.ip
+set_global_assignment -name IP_FILE ip/mipi_system/vvp_demosaic.ip
+set_global_assignment -name IP_FILE ip/mipi_system/vvp_vfw.ip
+set_global_assignment -name IP_FILE ip/hdmi_system/hdmi_vvp_tpg.ip
+set_global_assignment -name IP_FILE ip/mipi_system/mipi_csi2.ip
+set_global_assignment -name IP_FILE ip/mipi_system/mipi_system_clock_in.ip
+set_global_assignment -name IP_FILE ip/hdmi_system/cpu_clock_bridge.ip
+set_global_assignment -name IP_FILE ip/hdmi_system/cpu_reset_bridge.ip
+set_global_assignment -name IP_FILE ip/hdmi_system/vid_clock_bridge.ip
+set_global_assignment -name IP_FILE ip/mipi_system/mipi_system_reset_in.ip
+set_global_assignment -name IP_FILE ip/hdmi_system/hdmi_vvp_fr2cv.ip
+set_global_assignment -name IP_FILE ip/mipi_system/vvp_wbc.ip
+set_global_assignment -name IP_FILE ip/hdmi_system/hdmi_reset_bridge.ip
+set_global_assignment -name IP_FILE ip/hdmi_system/hdmi_vvp_cvo.ip
+set_global_assignment -name IP_FILE ip/mipi_system/vvp_histogram.ip
+
+set_location_assignment PIN_CK134 -to FPGA_RST_n
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to FPGA_RST_n -entity axe5_eagle_mipi_hdmi
+set_location_assignment PIN_A23 -to FPGA_Clock
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to FPGA_Clock -entity axe5_eagle_mipi_hdmi
+set_location_assignment PIN_BR102 -to OSC_CLK_1
+set_instance_assignment -name IO_STANDARD "1.8 V" -to OSC_CLK_1 -entity axe5_eagle_mipi_hdmi
+set_location_assignment PIN_CK125 -to LED0R
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to LED0R -entity axe5_eagle_mipi_hdmi
+set_location_assignment PIN_CL125 -to LED0G
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to LED0G -entity axe5_eagle_mipi_hdmi
+set_location_assignment PIN_BR118 -to LED0B
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to LED0B -entity axe5_eagle_mipi_hdmi
+set_location_assignment PIN_CF118 -to LED1R
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to LED1R -entity axe5_eagle_mipi_hdmi
+set_location_assignment PIN_AK107 -to LPDDR4A_CK_P -comment IOBANK_3A_B
+set_location_assignment PIN_AK104 -to LPDDR4A_CK_N -comment IOBANK_3A_B
+set_location_assignment PIN_AG111 -to LPDDR4A_RST -comment IOBANK_3A_B
+set_location_assignment PIN_M105 -to LPDDR4A_REFCK_p -comment IOBANK_3A_B
+set_instance_assignment -name IO_STANDARD "1.1V TRUE DIFFERENTIAL SIGNALING" -to LPDDR4A_REFCK_p -entity axe5_eagle_mipi_hdmi
+set_instance_assignment -name INPUT_TERMINATION DIFFERENTIAL -to LPDDR4A_REFCK_p -entity axe5_eagle_mipi_hdmi
+set_location_assignment PIN_T105 -to LPDDR4A_CS_N -comment IOBANK_3A_B
+set_location_assignment PIN_V108 -to LPDDR4A_CKE -comment IOBANK_3A_B
+set_location_assignment PIN_T114 -to LPDDR4A_CA[0] -comment IOBANK_3A_B
+set_location_assignment PIN_P114 -to LPDDR4A_CA[1] -comment IOBANK_3A_B
+set_location_assignment PIN_V117 -to LPDDR4A_CA[2] -comment IOBANK_3A_B
+set_location_assignment PIN_T117 -to LPDDR4A_CA[3] -comment IOBANK_3A_B
+set_location_assignment PIN_M114 -to LPDDR4A_CA[4] -comment IOBANK_3A_B
+set_location_assignment PIN_K114 -to LPDDR4A_CA[5] -comment IOBANK_3A_B
+set_location_assignment PIN_B128 -to LPDDR4A_DQ[0] -comment IOBANK_3A_B
+set_location_assignment PIN_A128 -to LPDDR4A_DQ[1] -comment IOBANK_3A_B
+set_location_assignment PIN_B130 -to LPDDR4A_DQ[2] -comment IOBANK_3A_B
+set_location_assignment PIN_A130 -to LPDDR4A_DQ[3] -comment IOBANK_3A_B
+set_location_assignment PIN_B116 -to LPDDR4A_DQ[4] -comment IOBANK_3A_B
+set_location_assignment PIN_A116 -to LPDDR4A_DQ[5] -comment IOBANK_3A_B
+set_location_assignment PIN_B113 -to LPDDR4A_DQ[6] -comment IOBANK_3A_B
+set_location_assignment PIN_A113 -to LPDDR4A_DQ[7] -comment IOBANK_3A_B
+set_location_assignment PIN_F117 -to LPDDR4A_DQ[8] -comment IOBANK_3A_B
+set_location_assignment PIN_H117 -to LPDDR4A_DQ[9] -comment IOBANK_3A_B
+set_location_assignment PIN_K117 -to LPDDR4A_DQ[10] -comment IOBANK_3A_B
+set_location_assignment PIN_M117 -to LPDDR4A_DQ[11] -comment IOBANK_3A_B
+set_location_assignment PIN_H108 -to LPDDR4A_DQ[12] -comment IOBANK_3A_B
+set_location_assignment PIN_F108 -to LPDDR4A_DQ[13] -comment IOBANK_3A_B
+set_location_assignment PIN_M108 -to LPDDR4A_DQ[14] -comment IOBANK_3A_B
+set_location_assignment PIN_K108 -to LPDDR4A_DQ[15] -comment IOBANK_3A_B
+set_location_assignment PIN_H98 -to LPDDR4A_DQ[16] -comment IOBANK_3A_T
+set_location_assignment PIN_F98 -to LPDDR4A_DQ[17] -comment IOBANK_3A_T
+set_location_assignment PIN_M98 -to LPDDR4A_DQ[18] -comment IOBANK_3A_T
+set_location_assignment PIN_K98 -to LPDDR4A_DQ[19] -comment IOBANK_3A_T
+set_location_assignment PIN_K87 -to LPDDR4A_DQ[20] -comment IOBANK_3A_T
+set_location_assignment PIN_M87 -to LPDDR4A_DQ[21] -comment IOBANK_3A_T
+set_location_assignment PIN_F84 -to LPDDR4A_DQ[22] -comment IOBANK_3A_T
+set_location_assignment PIN_D84 -to LPDDR4A_DQ[23] -comment IOBANK_3A_T
+set_location_assignment PIN_A106 -to LPDDR4A_DQ[24] -comment IOBANK_3A_T
+set_location_assignment PIN_B103 -to LPDDR4A_DQ[25] -comment IOBANK_3A_T
+set_location_assignment PIN_B106 -to LPDDR4A_DQ[26] -comment IOBANK_3A_T
+set_location_assignment PIN_A110 -to LPDDR4A_DQ[27] -comment IOBANK_3A_T
+set_location_assignment PIN_B91 -to LPDDR4A_DQ[28] -comment IOBANK_3A_T
+set_location_assignment PIN_A94 -to LPDDR4A_DQ[29] -comment IOBANK_3A_T
+set_location_assignment PIN_B88 -to LPDDR4A_DQ[30] -comment IOBANK_3A_T
+set_location_assignment PIN_A91 -to LPDDR4A_DQ[31] -comment IOBANK_3A_T
+set_location_assignment PIN_F114 -to LPDDR4A_DQSA1_p -comment IOBANK_3A_B
+set_location_assignment PIN_D114 -to LPDDR4A_DQSA1_n -comment IOBANK_3A_B
+set_location_assignment PIN_B122 -to LPDDR4A_DQSA0_p -comment IOBANK_3A_B
+set_location_assignment PIN_A125 -to LPDDR4A_DQSA0_n -comment IOBANK_3A_B
+set_location_assignment PIN_A101 -to LPDDR4A_DQSB1_p -comment IOBANK_3A_T
+set_location_assignment PIN_B101 -to LPDDR4A_DQSB1_n -comment IOBANK_3A_T
+set_location_assignment PIN_F95 -to LPDDR4A_DQSB0_p -comment IOBANK_3A_T
+set_location_assignment PIN_D95 -to LPDDR4A_DQSB0_n -comment IOBANK_3A_T
+set_location_assignment PIN_F105 -to LPDDR4A_DMA1 -comment IOBANK_3A_B
+set_location_assignment PIN_B119 -to LPDDR4A_DMA0 -comment IOBANK_3A_B
+set_location_assignment PIN_B97 -to LPDDR4A_DMB1 -comment IOBANK_3A_T
+set_location_assignment PIN_H87 -to LPDDR4A_DMB0 -comment IOBANK_3A_T
+set_location_assignment PIN_AK111 -to LPDDR4A_OCT_RZQIN -comment IOBANK_3A_B
+set_location_assignment PIN_V58 -to MIPI_LINK_p[1]
+set_location_assignment PIN_T58 -to MIPI_LINK_n[1]
+set_instance_assignment -name IO_STANDARD DPHY -to MIPI_LINK_p[1] -entity axe5_eagle_mipi_hdmi
+set_instance_assignment -name IO_STANDARD DPHY -to MIPI_LINK_n[1] -entity axe5_eagle_mipi_hdmi
+set_location_assignment PIN_P55 -to MIPI_LINK_p[0]
+set_location_assignment PIN_T55 -to MIPI_LINK_n[0]
+set_instance_assignment -name IO_STANDARD DPHY -to MIPI_LINK_p[0] -entity axe5_eagle_mipi_hdmi
+set_instance_assignment -name IO_STANDARD DPHY -to MIPI_LINK_n[0] -entity axe5_eagle_mipi_hdmi
+set_location_assignment PIN_K55 -to MIPI_LINK_CLK_p
+set_location_assignment PIN_M55 -to MIPI_LINK_CLK_n
+set_instance_assignment -name IO_STANDARD DPHY -to MIPI_LINK_CLK_p -entity axe5_eagle_mipi_hdmi
+set_instance_assignment -name IO_STANDARD DPHY -to MIPI_LINK_CLK_n -entity axe5_eagle_mipi_hdmi
+set_location_assignment PIN_BU109 -to MIPI_SDA
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to MIPI_SDA -entity axe5_eagle_mipi_hdmi
+set_location_assignment PIN_BR109 -to MIPI_SCL
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to MIPI_SCL -entity axe5_eagle_mipi_hdmi
+set_location_assignment PIN_BR112 -to MIPI_ENABLE
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to MIPI_ENABLE -entity axe5_eagle_mipi_hdmi
+set_location_assignment PIN_AC79 -to MIPI_RZQ
+set_instance_assignment -name IO_STANDARD "1.2-V" -to MIPI_RZQ -entity axe5_eagle_mipi_hdmi
+set_location_assignment PIN_AC68 -to MIPI_REFCLK_p
+set_instance_assignment -name IO_STANDARD "1.2V TRUE DIFFERENTIAL SIGNALING" -to MIPI_REFCLK_p -entity axe5_eagle_mipi_hdmi
+set_instance_assignment -name INPUT_TERMINATION DIFFERENTIAL -to MIPI_REFCLK_p -entity axe5_eagle_mipi_hdmi
+set_location_assignment PIN_BH19 -to HDMI_VS
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_VS -entity axe5_eagle_mipi_hdmi
+set_location_assignment PIN_CF12 -to HDMI_HS
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_HS -entity axe5_eagle_mipi_hdmi
+set_location_assignment PIN_BK31 -to HDMI_CLK
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_CLK -entity axe5_eagle_mipi_hdmi
+set_location_assignment PIN_BK19 -to HDMI_DE
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_DE -entity axe5_eagle_mipi_hdmi
+set_location_assignment PIN_BW19 -to HDMI_CT_HPD
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_CT_HPD -entity axe5_eagle_mipi_hdmi
+set_location_assignment PIN_BF25 -to HDMI_CEC_CLK
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_CEC_CLK -entity axe5_eagle_mipi_hdmi
+set_location_assignment PIN_BF32 -to HDMI_D[0]
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_D[0] -entity axe5_eagle_mipi_hdmi
+set_location_assignment PIN_CH12 -to HDMI_D[1]
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_D[1] -entity axe5_eagle_mipi_hdmi
+set_location_assignment PIN_BM22 -to HDMI_D[2]
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_D[2] -entity axe5_eagle_mipi_hdmi
+set_location_assignment PIN_BF21 -to HDMI_D[3]
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_D[3] -entity axe5_eagle_mipi_hdmi
+set_location_assignment PIN_BE21 -to HDMI_D[4]
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_D[4] -entity axe5_eagle_mipi_hdmi
+set_location_assignment PIN_BP22 -to HDMI_D[5]
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_D[5] -entity axe5_eagle_mipi_hdmi
+set_location_assignment PIN_BR22 -to HDMI_D[6]
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_D[6] -entity axe5_eagle_mipi_hdmi
+set_location_assignment PIN_BE25 -to HDMI_D[7]
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_D[7] -entity axe5_eagle_mipi_hdmi
+set_location_assignment PIN_BU22 -to HDMI_D[8]
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_D[8] -entity axe5_eagle_mipi_hdmi
+set_location_assignment PIN_BW28 -to HDMI_D[9]
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_D[9] -entity axe5_eagle_mipi_hdmi
+set_location_assignment PIN_BU28 -to HDMI_D[10]
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_D[10] -entity axe5_eagle_mipi_hdmi
+set_location_assignment PIN_BM31 -to HDMI_D[11]
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_D[11] -entity axe5_eagle_mipi_hdmi
+set_location_assignment PIN_BR28 -to HDMI_D[12]
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_D[12] -entity axe5_eagle_mipi_hdmi
+set_location_assignment PIN_BM28 -to HDMI_D[13]
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_D[13] -entity axe5_eagle_mipi_hdmi
+set_location_assignment PIN_BK28 -to HDMI_D[14]
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_D[14] -entity axe5_eagle_mipi_hdmi
+set_location_assignment PIN_BH28 -to HDMI_D[15]
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_D[15] -entity axe5_eagle_mipi_hdmi
+set_location_assignment PIN_BF36 -to HDMI_D[16]
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_D[16] -entity axe5_eagle_mipi_hdmi
+set_location_assignment PIN_BE43 -to HDMI_D[17]
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_D[17] -entity axe5_eagle_mipi_hdmi
+set_location_assignment PIN_BU31 -to HDMI_D[18]
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_D[18] -entity axe5_eagle_mipi_hdmi
+set_location_assignment PIN_BP31 -to HDMI_D[19]
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_D[19] -entity axe5_eagle_mipi_hdmi
+set_location_assignment PIN_BR31 -to HDMI_D[20]
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_D[20] -entity axe5_eagle_mipi_hdmi
+set_location_assignment PIN_BF29 -to HDMI_D[21]
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_D[21] -entity axe5_eagle_mipi_hdmi
+set_location_assignment PIN_BF40 -to HDMI_D[22]
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_D[22] -entity axe5_eagle_mipi_hdmi
+set_location_assignment PIN_BE29 -to HDMI_D[23]
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to HDMI_D[23] -entity axe5_eagle_mipi_hdmi
+set_location_assignment PIN_F4 -to MUX_I2C_SDA
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to MUX_I2C_SDA -entity axe5_eagle_mipi_hdmi
+set_location_assignment PIN_D4 -to MUX_I2C_SCL
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to MUX_I2C_SCL -entity axe5_eagle_mipi_hdmi
+set_location_assignment PIN_BK22 -to DBG_TXD
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to DBG_TXD -entity axe5_eagle_mipi_hdmi
+set_location_assignment PIN_CH4 -to DBG_RXD
+set_instance_assignment -name IO_STANDARD "1.8-V LVCMOS" -to DBG_RXD -entity axe5_eagle_mipi_hdmi
+set_location_assignment PIN_B30 -to FPGA_PB[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to FPGA_PB[2] -entity axe5_eagle_mipi_hdmi
+set_location_assignment PIN_A30 -to FPGA_PB[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to FPGA_PB[3] -entity axe5_eagle_mipi_hdmi
