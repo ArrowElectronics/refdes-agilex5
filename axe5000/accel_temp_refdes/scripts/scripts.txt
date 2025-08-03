@@ -1,15 +1,16 @@
+# Create Demo RiscFree CMake project
 
 niosv-app --bsp_dir=software/bsp --app_dir=software/app -s=software/app/axe5000_demo_refdes.c
 
-riscfree -data software
+# Launch RiscFree IDE
 
-# Build Design in Ashling RiscFree
+riscfree -data software
 
 # Create demo.hex for onchip memory in the FPGA
 
 elf2hex software/app/build/Debug/app.elf -b 0x00000000 -w 32 -e 0x0003FFFF --record=4 -o demo.hex
 
-# Compile in Quartus
+# Compile in Quartus, define pin assignments
 
 source sources/axe5000_pin_assignment.tcl
 
@@ -21,6 +22,8 @@ niosv-download -g -r -c 1 software/app/build/Debug/app.elf
 
 # Create flashable file
 
-quartus_pfg.exe -c axe5000_demo_refdes.sof axe5000_demo_refdes.jic -o device=MT25QU256 -o flash_loader=A5EC008BM16AE6S -o mode=ASX4
+quartus_pfg.exe -c axe5000_top.sof axe5000_top.jic -o device=MT25QU256 -o flash_loader=A5EC008BM16AE6S -o mode=ASX4
 
-quartus_pgm.exe -c 1 -m jtag -o "pvbi;axe5000_demo_refdes.jic@1"
+# Flash the AXE5000
+
+quartus_pgm.exe -c 1 -m jtag -o "pvbi;axe5000_top.jic@1"
