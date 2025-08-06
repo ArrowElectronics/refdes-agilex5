@@ -26,7 +26,7 @@
 //I2C parameters
 #define U6_addr     0x08	// FS1606 Power Module
 #define U8_addr     0x09	// FS1606 Power Module
-#define U10_addr    0x0D	// FS1606 Power Module
+#define U10_addr    0x0C	// FS1606 Power Module
 #define U11_addr    0x0B	// FS1606 Power Module
 #define LIS3DH_addr 0x18
 
