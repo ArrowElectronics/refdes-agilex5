@@ -13,7 +13,7 @@ set_location_assignment PIN_A6  -to HR_RWDS
 set_instance_assignment -name IO_STANDARD "1.3-V LVCMOS" -to HR_RWDS
 set_location_assignment PIN_F7  -to HR_HRESETn
 set_instance_assignment -name IO_STANDARD "1.3-V LVCMOS" -to HR_HRESETn
-set_location_assignment PIN_C7  -to HR_CSn
+set_location_assignment PIN_D8  -to HR_CSn
 set_instance_assignment -name IO_STANDARD "1.3-V LVCMOS" -to HR_CSn
 set_location_assignment PIN_C3  -to HR_DQ[0]
 set_instance_assignment -name IO_STANDARD "1.3-V LVCMOS" -to HR_DQ[0]
@@ -31,7 +31,7 @@ set_location_assignment PIN_B3  -to HR_DQ[6]
 set_instance_assignment -name IO_STANDARD "1.3-V LVCMOS" -to HR_DQ[6]
 set_location_assignment PIN_C6  -to HR_DQ[7]
 set_instance_assignment -name IO_STANDARD "1.3-V LVCMOS" -to HR_DQ[7]
-set_location_assignment PIN_B5  -to HR_CLK
+set_location_assignment PIN_D7  -to HR_CLK
 set_instance_assignment -name IO_STANDARD "1.3-V LVCMOS" -to HR_CLK
 
 # DIP Switches
