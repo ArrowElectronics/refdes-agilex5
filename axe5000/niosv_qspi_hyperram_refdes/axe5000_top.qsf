@@ -1,0 +1,61 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 2025  Altera Corporation. All rights reserved.
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and any partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License 
+# Subscription Agreement, the Altera Quartus Prime License Agreement,
+# the Altera IP License Agreement, or other applicable license
+# agreement, including, without limitation, that your use is for
+# the sole purpose of programming logic devices manufactured by
+# Altera and sold by Altera or its authorized distributors.  Please
+# refer to the Altera Software License Subscription Agreements 
+# on the Quartus Prime software download page.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus Prime
+# Version 25.1.0 Build 129 03/26/2025 SC Pro Edition
+# Date created = 11:50:48  July 23, 2025
+#
+# -------------------------------------------------------------------------- #
+
+set_global_assignment -name TOP_LEVEL_ENTITY axe5000_top
+set_global_assignment -name AUTO_RESTART_CONFIGURATION OFF
+set_global_assignment -name ON_CHIP_BITSTREAM_DECOMPRESSION OFF
+set_global_assignment -name LAST_QUARTUS_VERSION "25.3.0 SP0.27 Pro Edition"
+set_global_assignment -name DEVICE A5EC008BM16AE6S
+set_global_assignment -name FAMILY "Agilex 5"
+set_global_assignment -name ACTIVE_SERIAL_CLOCK AS_FREQ_25MHZ
+set_global_assignment -name DEVICE_INITIALIZATION_CLOCK OSC_CLK_1_25MHZ
+set_global_assignment -name PWRMGT_VOLTAGE_OUTPUT_FORMAT "LINEAR FORMAT"
+set_global_assignment -name PWRMGT_LINEAR_FORMAT_N "-12"
+set_global_assignment -name BOARD default
+set_global_assignment -name POWER_APPLY_THERMAL_MARGIN ADDITIONAL
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name VERILOG_FILE ../sources/axe5000_niosv_top.v
+set_global_assignment -name IP_FILE ip/niosv_system/niosv_system_clock_in.ip
+set_global_assignment -name IP_FILE ip/niosv_system/niosv_system_reset_in.ip
+set_global_assignment -name QSYS_FILE niosv_system.qsys
+set_global_assignment -name IP_FILE ip/niosv_system/onchip_memory.ip
+set_global_assignment -name IP_FILE ip/niosv_system/sysid.ip
+set_global_assignment -name IP_FILE ip/niosv_system/pio_led.ip
+set_global_assignment -name IP_FILE ip/niosv_system/lw_uart.ip
+set_global_assignment -name IP_FILE ip/niosv_system/pio_pb.ip
+set_global_assignment -name QSYS_FILE top_system.qsys
+set_global_assignment -name IP_FILE ip/top_system/top_system_clock_in.ip
+set_global_assignment -name IP_FILE ip/niosv_system/niosv_system_clock_bridge_0.ip
+set_global_assignment -name IP_FILE ip/niosv_system/niosv_system_mm_bridge_0.ip
+set_global_assignment -name IP_FILE ip/niosv_system/niosv_system_intel_niosv_g_0.ip
+set_global_assignment -name IP_FILE ip/niosv_system/niosv_system_sll_xspi_mc_avmm_top_0.ip
+set_global_assignment -name IP_FILE ip/niosv_system/mailbox_client.ip
+set_global_assignment -name IP_FILE ip/clock_subsystem/clock_subsystem_clock_in.ip
+set_global_assignment -name IP_FILE ip/clock_subsystem/clock_subsystem_intel_vvp_reset_extend_0.ip
+set_global_assignment -name IP_FILE ip/clock_subsystem/clock_subsystem_intel_vip_reset_sync_block_0.ip
+set_global_assignment -name IP_FILE ip/clock_subsystem/clock_subsystem_iopll_1.ip
+set_global_assignment -name IP_FILE ip/clock_subsystem/clock_subsystem_mem_reset_handler_0.ip
+set_global_assignment -name IP_FILE ip/clock_subsystem/reset_release.ip
+set_global_assignment -name QSYS_FILE clock_subsystem.qsys

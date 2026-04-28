@@ -1,0 +1,5 @@
+Edition = Full Featured Edition IP
+ProductID = 0062
+ProductLabel  = SLL_CA_XSPI_MC_V3_3_demo_edition  
+Top Design Name  = sll_xspi_mc_avmm_top  
+TIMEOUT =after 30 minutes

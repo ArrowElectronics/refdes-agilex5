@@ -1,0 +1,49 @@
+bootcopier_app
+--------------
+
+niosv-bsp \
+	./software/bootcopier_bsp/settings.bsp \
+	--create \
+	--qsys=./top_system.qsys \
+	--quartus-project=./axe5000_top.qpf \
+	--type=hal \
+	--cpu-instance=niosv_system_0_niosv_g \
+	--script=./software/bootcopier_bsp/settings.tcl
+
+niosv-app \
+	-b=software/bootcopier_bsp \
+	-a=software/bootcopier_app \
+	-s=software/bootcopier_app/mailbox_bootloader.c
+
+cmake \
+	-G "Unix Makefiles" \
+	-DCMAKE_BUILD_TYPE=Release \
+	-B software/bootcopier_app/build/release \
+	-S software/bootcopier_app
+
+cmake \
+	--build software/bootcopier_app/build/release
+
+elf2hex software/bootcopier_app/build/release/bootcopier_app.elf -b 0x1000000 -w 32 -e 0x100ffff -o software/bootcopier_app/build/release/niosv_system_0_bootcopier_ocm.hex
+
+user_app
+--------
+
+niosv-bsp \
+	./software/user_bsp/settings.bsp \
+	--create \
+	--qsys=./top_system.qsys \
+	--quartus-project=./axe5000_top.qpf \
+	--type=hal \
+	--cpu-instance=niosv_system_0_niosv_g \
+	--script=./software/user_bsp/settings.tcl
+
+niosv-app -b=software/user_bsp -a=software/user_app -s=software/user_app/user_application.c
+
+cmake -G "Unix Makefiles" -DCMAKE_BUILD_TYPE=Release -B software/user_app/build/release -S software/user_app
+
+make -C software/user_app/build/release
+
+elf2flash --input software/user_app/build/release/user_app.elf --output=software/user_app/build/release/user_app.srec --epcs --offset 0x200000		  
+		  
+riscv32-unknown-elf-objcopy -I srec -O ihex software/user_app/build/release/user_app.srec software/user_app/build/release/user_app.hex

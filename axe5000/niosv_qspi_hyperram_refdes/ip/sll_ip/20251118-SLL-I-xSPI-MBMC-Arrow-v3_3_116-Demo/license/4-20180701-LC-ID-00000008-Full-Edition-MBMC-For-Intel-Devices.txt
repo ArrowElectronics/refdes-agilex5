@@ -1,0 +1,164 @@
+﻿
+# == START OF LICENCE CREDENTIAL WITH EMBEDDED QUARTUS LICENSE KEY ==
+#
+#
+# License key installation instructions: 
+#    Please install (copy and paste) the entire License Credential with Embedded License Key 
+#    into Quartus Prime.   If required, search the phrase 
+#         “Intel FPGA Software Installation and Licensing Quick Start” 
+#    on the Internet to find instructions on how to install License Keys into Quartus Prime. 
+#
+#
+# License Credential Number:  
+#   LC-ID-00000008			
+#
+# Issued by:
+#   Synaptic Laboratories Ltd (SLL)
+#   Company ID 41272593
+#
+# Issued to: 
+#   The Licensee is any person or organisation that has possession of or use of an 
+#   Intel Corporation reference design or product that was delivered 
+#   to you with a copy of S/Labs HBMC IP for Intel FPGA with the SLL Agreement 
+#   and the clearly stated obligation to first read the agreement prior to use 
+#   of the HBMC IP, and who subsequently demonstrates agreement and acceptance 
+#   of the Agreement with all its Provisions by downloading and using this 
+#   Licensed Product.
+#
+# Issued on:
+#   1 December 2025
+#	
+# Associated with Quote:
+#   Not associated with a Quote. 
+#
+# Associated with and incorporated by reference into the License Agreement: 
+#   License and Confidentiality Agreement (the ‘Agreement’) 
+#   for the use of Synaptic Laboratories Ltd. (SLL) Intellectual Property (IP) 
+#   on Intel Corporation products, 1 July 2018. 
+#   SLL Legal Agreement Number: LA-IDX-00000212
+#
+# The Extended Terms included in the License Agreement: 
+#   Definitions, Extended Terms and Conditions
+#   Version 1.01, 1 July 2018
+#   SLL Legal Agreement Number: LA-ID-0007
+#   Link to full text:
+#     https://synaptic-labs.s3.amazonaws.com/licenses/20180701-LA-ID-0007-ExtendedTerms.pdf
+#   SHA-256 digest of the full text:
+#     087f874181beb7fe49b2f3898a887c60bc0c33ca7538c99592cb100a750f7bfc
+# 
+# Associated with Network Interface Card (NIC) identifier: 
+#   Can be used with any NIC identifier.
+#
+# NOTICE:	
+#   BY DOWNLOADING, INSTALLING, COPYING OR USING THE LICENSED PRODUCT 
+#   You acknowledge that You have read the above Agreement, understand it, 
+#   accept it and agree to be bound by all its Provisions.
+#
+# Name of Licensed Product:  
+#   Free Trial Licence for the Full Edition of S/Labs MBMC IP for Intel FPGA 
+#
+# License Type:  
+#   Free Trial License
+#
+# Target Application:  
+#   During the License Period, and prior to the purchase of a paid license, 
+#   and subject to the Provisions of the Agreement LA-IDX-00000212, the Licensee 
+#    may only use the Licensed Product to:
+#     (a)  design with, parameterise, compile, route, and generate 
+#          programming files and netlists with the Licensed Product, 
+#          solely for implementation in one or more Supported Device/s 
+#     (b)  program Supported Device/s owned by the Licensee with the 
+#          Licensed Product;
+#     (c)  exercise the rights granted in Sections (a) and (b) above 
+#          through Authorised Contractors;
+#     (d)  install the Licensed Product on any computer owned by the Licensee
+#         or the Authorised Contractor,
+#   solely for the purposes of Product evaluation.
+#		
+#   Use of the Licensed Product for any other purpose/s requires an 
+#   amendment to this Agreement or a separate license agreement authorising 
+#   the use of the Licensed Product for the other purpose/s.
+#
+#   This License Credential does not grant any sub-licensing.  
+#
+#   This License Credential does not grant the FPGA bitstream generated 
+#   under this credential to be sold, leased or used in any commercial 
+#   capacity by the Licensee.  
+#
+#   Analysis of any source code, binaries, and operation of the Licensed
+#   Product for development of competing software and/or hardware is 
+#   strictly prohibited. #
+#   See the License Agreement for the full Provisions of this Agreement.
+#
+# Licence Expiration:
+#   This License Credential never expires.  Use for the Target Application
+#   may continue unless the License Period is terminated in accordance 
+#   with the Provisions of the Agreement.
+#
+# DISCLAIMER OF WARRANTY:
+#   PRODUCT IS PROVIDED TO LICENSEE 'AS IS’, WITH ALL FAULTS, 
+#   AND WITH NO WARRANTY 
+#
+# Maintenance:
+#   SLL may provide updates, upgrades, new versions of the 
+#   Licensed Product to You for Use with this License Credential
+#   solely at SLL's  discretion. 
+#
+#   Visit Synaptic Labs website page to check for latest news on our IP: 
+#      https://synaptic-labs.com/
+#
+#   Email info@synaptic-labs.com to opt-in to S/Labs HBMC IP
+#   mailing list for updates, enhancements and bug fix news.  
+#
+#   You can also request further information at info@synaptic-labs.com . 
+#
+# Support:
+#   Limited email and phone support is provided for this Free Trial License by 
+#   SLL solely at SLL’s discretion.
+#
+# Permitted FPGA/ASIC Vendor:
+#   Intel 
+#
+# Supported Device/s:  
+#   Intel : Agilex 3
+#   Intel : Agilex 5
+#
+# License Key lock type: 
+#   Tethered without node-locking. 
+#
+# Number of Seats: 
+#   Unlimited
+#
+# Network Interface Card (NIC) Identifier: 
+#   Can be used with any NIC identifier.
+#	
+# Licensed Product is tethered to the desktop at runtime: 
+#   True
+#
+# FPGA bitstream can be programmed into FPGA SRAM: 
+#   Yes, has .SOF support
+# 
+# FPGA bitstream can be programmed into Flash:
+#   No, does not have .POF support
+#
+# Simulation Support: 
+#   False
+#
+# Runtime Limiter Embedded in the Soft IP: 
+#   True 
+#
+# Runtime Limiter Embedded in the Soft IP triggers after: 
+#   30 minutes
+#
+# How to get the Licensed Product associated with this License Credential:
+#   The xSPI-MBMC IP maybe be bundled in INTEL's and SLL's reference designs 
+#   targeted to Intel FPGA products.  
+#   Contact SLL ( info@synaptic-labs.com ) for more information.
+#
+# License Key:
+#
+#Contatc synaptic Labs' for Quartus license on 
+#     https://synaptic-labs.com/trial-ip-request/ 
+#
+#
+# == END OF LICENCE CREDENTIAL WITH EMBEDDED QUARTUS LICENSE KEY ==
