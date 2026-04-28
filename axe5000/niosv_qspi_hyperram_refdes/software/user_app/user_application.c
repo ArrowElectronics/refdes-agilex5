@@ -1,3 +1,8 @@
+/*
+  SPDX-FileCopyrightText: Copyright (C) 2026 Synaptic Labs Ltd. 
+  SPDX-License-Identifier: MIT-0 
+*/
+
 #include <stdio.h>
 #include <unistd.h>
 #include "altera_avalon_pio_regs.h"

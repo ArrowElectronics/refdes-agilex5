@@ -1,7 +1,7 @@
-#
-# SPDX-FileCopyrightText: Copyright (C) 2026 Synaptic Labs Ltd. 
-# SPDX-License-Identifier: MIT-0 
-#
+/*
+  SPDX-FileCopyrightText: Copyright (C) 2026 Synaptic Labs Ltd. 
+  SPDX-License-Identifier: MIT-0 
+*/
 
 `define INCLUDE_PSRAM
 
