@@ -1,5 +1,7 @@
 #include "intel_mailbox_client_flash.h"
 #include "sys/alt_irq.h"
+#include "sys/alt_cache.h"
+#include <stdio.h>
 #include <unistd.h>
 
 // Constants
